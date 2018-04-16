@@ -1,5 +1,5 @@
 # XProc-3.0-book-sources
-Source code belonging to the book: XProc 3.0 - Programmer Reference"
+## Source code belonging to the book: "XProc 3.0 - Programmer Reference"
 
 At this moment (first half of 2018) this is still very much work in progress. Both the XProc 3.0 standard and the accompanying book are still under development.
 
