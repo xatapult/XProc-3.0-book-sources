@@ -1,7 +1,7 @@
 <p:declare-step xmlns:p="http://www.w3.org/ns/xproc" version="3.0">
 
   <p:documentation>
-    A version of the proverbial "Hello World" XProc pipeline...
+    The proverbial "Hello World" XProc pipeline...
   </p:documentation>
 
   <!-- ================================================================== -->
