@@ -4,14 +4,9 @@
   <p:input port="source" primary="true"/>
   <p:output port="result" primary="true"/>
   
-  <!-- 1. Provide an option for the header info filename, with a default -->
   <p:option name="additional-header-info-file" 
     select="'../documents/additional-header-contents.xml'"/>
-  
-  <!-- 2. Provide a port for supplying the header information -->
   <p:input port="header-info">
-    <!-- 3. Load the document referenced in the option only when nothing 
-      is connected to this port -->
     <p:document href="{$additional-header-info-file}"/>
   </p:input>
   
@@ -24,5 +19,12 @@
       <p:pipe step="html-conversion-pipeline" port="header-info"/>
     </p:with-input>
   </p:insert>
+  
+  <p:viewport match="add-additional-data">
+    <p:xslt>
+      <p:with-input port="source" href="{resolve-uri(/*/@source, base-uri())}"
+      <p:with-input port="stylesheet" href="{/*/@stylesheet}"/>
+    </p:xslt>
+  </p:viewport>
   
 </p:declare-step>

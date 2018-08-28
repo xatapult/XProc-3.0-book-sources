@@ -1,0 +1,5 @@
+<data>
+  <weather city="Amsterdam" temperature="21" rain="drizzle"/>
+  <weather city="Madrid" temperature="28" rain="none"/>
+  <weather city="Stockholm" temperature="16" rain="heavy"/>
+</data>
