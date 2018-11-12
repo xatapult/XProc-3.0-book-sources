@@ -37,7 +37,7 @@
 
   <xsl:template match="para">
     <p>
-      <xsl:copy-of select="@* | node()"/>
+      <xsl:apply-templates select="@* | node()"/>
     </p>
   </xsl:template>
 

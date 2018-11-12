@@ -12,7 +12,7 @@
 
     <div class="sect2">
       <title>My second chapter</title>
-      <para>The second for the first chapter...</para>
+      <para>The text for the second chapter...</para>
       <add-additional-data source="additional-data.xml"/>
       <para>More text</para>
     </div>
