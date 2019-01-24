@@ -1,0 +1,6 @@
+<additional-header-contents>
+  <link rel="stylesheet" type="text/css" href="style-1.css"/>
+  <link rel="stylesheet" type="text/css" href="style-2.css"/>
+  <script type="text/javascript" src="javascript-1.js"/> 
+  <script type="text/javascript" src="javascript-2.js"/> 
+</additional-header-contents>

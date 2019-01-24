@@ -1,0 +1,22 @@
+<document>
+  <title>My 101 publication + additional data</title>
+
+  <div class="sect1">
+    <title>First part</title>
+
+    <div class="sect2">
+      <title>My first chapter</title>
+      <para>The text for the first chapter...</para>
+      <para>More text</para>
+    </div>
+
+    <div class="sect2">
+      <title>My second chapter</title>
+      <para>The text for the second chapter...</para>
+      <add-additional-data source="additional-data.xml"/>
+      <para>More text</para>
+    </div>
+
+  </div>
+
+</document>
