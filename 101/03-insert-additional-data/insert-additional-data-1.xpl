@@ -1,13 +1,13 @@
 <p:declare-step xmlns:p="http://www.w3.org/ns/xproc" version="3.0"
   name="html-conversion-pipeline">
 
-  <p:input port="source" primary="true"/>
+  <p:input port="source" primary="true" href="../documents/example-contents-2.xml"/>
   <p:output port="result" primary="true"/>
   
-  <p:option name="additional-header-info-file" 
-    select="'../documents/additional-header-contents.xml'"/>
+  <!--<p:option name="additional-header-info-file" 
+    select="'../documents/additional-header-contents.xml'"/>-->
   <p:input port="header-info">
-    <p:document href="{$additional-header-info-file}"/>
+    <p:document href="../documents/additional-header-contents.xml"/>
   </p:input>
   
   <p:xslt>

@@ -21,7 +21,7 @@
     <!-- Unwrap the div elements from each other: -->
     <xsl:copy>
       <xsl:copy-of select="@*"/>
-      <xsl:apply-templates select="* except ./div"/>
+      <xsl:apply-templates select="* except div"/>
     </xsl:copy>
     <xsl:apply-templates select="div"/>
   </xsl:template>
@@ -30,8 +30,7 @@
     <!-- Find out how deep this div is nested to get the right heading level: -->
     <xsl:variable name="nesting-level" as="xs:integer" select="count(ancestor::div)"/>
     <xsl:element name="h{$nesting-level}">
-      <xsl:copy-of select="@*"/>
-      <xsl:value-of select="."/>
+      <xsl:apply-templates select="@* | node()"/>
     </xsl:element>
   </xsl:template>
 

@@ -7,7 +7,7 @@
 
   <!-- 3. Convert document to HTML: -->
   <p:xslt>
-    <p:with-input port="stylesheet" href="xsl/basic-conversion.xsl"/>
+    <p:with-input  port="stylesheet" href="xsl/basic-conversion.xsl"/>
   </p:xslt>
   
-</p:declare-step>"
+</p:declare-step>
