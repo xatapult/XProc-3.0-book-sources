@@ -1,14 +1,10 @@
 <p:declare-step xmlns:p="http://www.w3.org/ns/xproc" version="3.0"
   name="html-conversion-pipeline">
 
-  <p:input port="source" primary="true" href="../documents/example-contents-2.xml"/>
+  <p:input port="source" primary="true"/>
   <p:output port="result" primary="true"/>
   
-  <!--<p:option name="additional-header-info-file" 
-    select="'../documents/additional-header-contents.xml'"/>-->
-  <p:input port="header-info">
-    <p:document href="../documents/additional-header-contents.xml"/>
-  </p:input>
+  <p:input port="header-info"/>
   
   <p:xslt>
     <p:with-input port="stylesheet" href="xsl/basic-conversion.xsl"/>
@@ -25,7 +21,7 @@
     <!-- 2. Process the data into a table using an XSLT -->
     <p:xslt>
       <!-- 3. Get the data to convert, relative to the source document -->
-      <p:with-input port="source" href="{resolve-uri(/*/@source, base-uri())}"
+      <p:with-input port="source" href="{resolve-uri(/*/@source, base-uri())}"/>
       <p:with-input port="stylesheet" href="xsl/convert-additional-data.xsl"/>
     </p:xslt>
   </p:viewport>

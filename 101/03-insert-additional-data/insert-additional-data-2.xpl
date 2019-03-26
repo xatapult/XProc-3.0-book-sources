@@ -3,12 +3,8 @@
 
   <p:input port="source" primary="true"/>
   <p:output port="result" primary="true"/>
-  
-  <p:option name="additional-header-info-file" 
-    select="'../documents/additional-header-contents.xml'"/>
-  <p:input port="header-info">
-    <p:document href="{$additional-header-info-file}"/>
-  </p:input>
+ 
+  <p:input port="header-info"/>
   
   <p:xslt>
     <p:with-input port="stylesheet" href="xsl/basic-conversion.xsl"/>
