@@ -1,8 +1,6 @@
 <xsl:stylesheet version="3.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="#all">
 
-  <xsl:output method="xml" indent="yes" encoding="UTF-8"/>
-
   <xsl:template match="/">
    <table>
      <tr>
