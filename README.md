@@ -5,7 +5,7 @@ At this moment (first half of 2018) this is still very much work in progress. Bo
 
 More information about XProc 3.0 can be found at http://spec.xproc.org/master/head/
 
-Publishing is planned somewhere beginning 2019.
+Publishing is planned somewhere beginning 2020.
 
 ----
 
