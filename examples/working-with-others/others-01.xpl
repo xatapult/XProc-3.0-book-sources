@@ -17,20 +17,21 @@
     <p:with-input select="//c:file"/>
 
     <!-- 5 - Load the file and determine its content-type -->
-    <p:load href="{$input-directory}/{/*/@name}"/>
+    <p:variable name="filename" select="/*/@name"/>
+    <p:load href="{$input-directory}/{$filename}"/>
     <p:variable name="content-type" select="p:document-property(., 'content-type')"/>
 
     <!-- 6 - Based on the content type, store the document in a 
       particular directory -->
     <p:choose>
       <p:when test="$content-type eq 'application/xml'">
-        <p:store href="{$output-base-directory}/xml"/>
+        <p:store href="{$output-base-directory}/xml/{$filename}"/>
       </p:when>
       <p:when test="$content-type eq 'image/jpeg'">
-        <p:store href="{$output-base-directory}/jpg"/>
+        <p:store href="{$output-base-directory}/jpg/{$filename}"/>
       </p:when>
       <p:otherwise>
-        <p:store href="{$output-base-directory}/junk"/>
+        <p:store href="{$output-base-directory}/junk/{$filename}"/>
       </p:otherwise>
     </p:choose>
 
