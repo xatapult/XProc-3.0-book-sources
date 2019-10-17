@@ -18,7 +18,7 @@
   
   <p:viewport match="add-additional-data">
     <p:xslt>
-      <p:with-input port="source" href="{resolve-uri(/*/@source, base-uri())}"
+      <p:with-input port="source" href="{resolve-uri(/*/@source, base-uri())}"/>
       <p:with-input port="stylesheet" href="{/*/@stylesheet}"/>
     </p:xslt>
   </p:viewport>
