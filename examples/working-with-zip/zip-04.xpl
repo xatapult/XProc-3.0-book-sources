@@ -20,14 +20,16 @@
   <p:if test="empty(/c:archive/c:entry[@name eq $main-file])">
     <p:error code="no-demo-html">
       <p:with-input>
-        <message>The ZIP file {$zip-file-uri} does not contain a {$main-file} file.</message>
+        <message>The ZIP file {$zip-file-uri} does not contain 
+          a {$main-file} file.</message>
       </p:with-input>
     </p:error>
   </p:if>
 
   <!-- Change the manifest so it includes the additional image: -->
   <p:variable name="source-image-location"
-    select="resolve-uri($img-source-folder || '/' || $additional-image, static-base-uri())"/>
+    select="resolve-uri($img-source-folder || '/' || $additional-image, 
+      static-base-uri())"/>
   <p:insert match="/*" position="last-child">
     <p:with-input port="insertion">
       <c:entry href="{$source-image-location}"
