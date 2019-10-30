@@ -6,33 +6,26 @@
 
   <!-- Identify the main zip file: -->
   <p:identity name="original-zip-file"/>
-
-  <!-- Set up things: -->
-  <p:variable name="zip-file-uri" select="p:document-property(., 'base-uri')"/>
-  <p:variable name="main-file" select="'demo.html'"/>
-  <p:variable name="additional-image" select="'old.png'"/>
-  <p:variable name="img-target-folder" select="'img'"/>
-
+  
   <!-- Test for the main file being present: -->
   <p:archive-manifest/>
-  <p:if test="empty(/c:archive/c:entry[@name eq $main-file])">
+  <p:if test="empty(/c:archive/c:entry[@name eq 'demo.html'])">
     <p:error code="no-demo-html">
       <p:with-input>
-        <message>The ZIP file {$zip-file-uri} does not contain 
-          a {$main-file} file.</message>
+        <message>The ZIP file does not contain the correct file.</message>
       </p:with-input>
     </p:error>
   </p:if>
 
-  <!-- Extract and change the main file: -->
-  <p:unarchive include-filter="{$main-file}">
+  <!-- 1 - Extract the demo.html file: -->
+  <p:unarchive include-filter="demo.html">
     <p:with-input pipe="@original-zip-file"/>
   </p:unarchive>
+  
+  <!-- 2 - Change it by inserting a reference to another image -->
   <p:insert match="body" position="last-child">
     <p:with-input port="insertion">
-      <p>Old logo: 
-        <img src="{$img-target-folder}/{$additional-image}" width="100"/>
-      </p>
+      <p>Old logo: <img src="additional-images/old.png" width="100"/></p>
     </p:with-input>
   </p:insert>
 

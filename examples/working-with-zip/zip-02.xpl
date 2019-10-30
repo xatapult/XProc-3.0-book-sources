@@ -4,17 +4,12 @@
   <p:input port="source" href="input/processable.zip"/>
   <p:output port="result"/>
 
-  <!-- Set up things: -->
-  <p:variable name="zip-file-uri" select="p:document-property(., 'base-uri')"/>
-  <p:variable name="main-file" select="'demo.html'"/>
-
   <!-- Test for the main file being present: -->
   <p:archive-manifest/>
-  <p:if test="empty(/c:archive/c:entry[@name eq $main-file])">
+  <p:if test="empty(/c:archive/c:entry[@name eq 'demo.html'])">
     <p:error code="no-demo-html">
       <p:with-input>
-        <message>The ZIP file {$zip-file-uri} does not contain a 
-          {$main-file} file.</message>
+        <message>The ZIP file does not contain the correct file.</message>
       </p:with-input>
     </p:error>
   </p:if>
