@@ -50,6 +50,6 @@
   <p:store href="build/zip-result.zip"/>
 
   <!-- 5 - As a report, output its manifest: -->
-  <p:archive-manifest relative-to="build/zip-result.zip"/>
+  <p:archive-manifest relative-to="build/zip-result.zip/"/>
 
 </p:declare-step>
