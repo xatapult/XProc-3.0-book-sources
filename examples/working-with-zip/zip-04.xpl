@@ -49,7 +49,9 @@
   </p:archive>
   <p:store href="build/zip-result.zip"/>
 
-  <!-- 5 - As a report, output its manifest: -->
-  <p:archive-manifest relative-to="build/zip-result.zip/"/>
-
+  <!-- 5 - As a report, output where the new zip is stored: -->
+  <p:identity>
+    <p:with-input pipe="result-uri"/>
+  </p:identity>
+  
 </p:declare-step>
