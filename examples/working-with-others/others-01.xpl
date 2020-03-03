@@ -19,7 +19,8 @@
     <!-- 5 - Load the file and determine its content-type -->
     <p:variable name="filename" select="/*/@name"/>
     <p:load href="{$input-directory}/{$filename}"/>
-    <p:variable name="content-type" select="p:document-property(., 'content-type')"/>
+    <p:variable name="content-type"
+                select="p:document-property(., 'content-type')"/>
 
     <!-- 6 - Based on the content type, store the document in a 
       particular directory -->

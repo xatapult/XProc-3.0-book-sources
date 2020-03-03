@@ -1,8 +1,7 @@
 <p:declare-step xmlns:p="http://www.w3.org/ns/xproc" 
   xmlns:c="http://www.w3.org/ns/xproc-step" 
   xmlns:html="http://www.w3.org/1999/xhtml" 
-  version="3.0"
-  exclude-inline-prefixes="#all">
+  version="3.0" exclude-inline-prefixes="#all">
 
   <p:input port="source" href="input/processable.zip"/>
   <p:output port="result"/>
@@ -37,7 +36,8 @@
   <!-- 3 - Add a reference to the additional image to the main file: -->
   <p:for-each>
     <p:if test="p:document-property(., 'base-uri') eq 'demo.html'">
-      <p:insert match="body" position="last-child" xmlns="http://www.w3.org/1999/xhtml">
+      <p:insert match="body" position="last-child"
+                xmlns="http://www.w3.org/1999/xhtml">
         <p:with-input port="insertion">
           <p>Old logo: <img src="img/old.png" width="100"/></p>
         </p:with-input>
