@@ -28,7 +28,8 @@
 
   <xsl:template match="div/title">
     <!-- Find out how deep this div is nested to get the right heading level: -->
-    <xsl:variable name="nesting-level" as="xs:integer" select="count(ancestor::div)"/>
+    <xsl:variable name="nesting-level" as="xs:integer"
+                  select="count(ancestor::div)"/>
     <xsl:element name="h{$nesting-level}">
       <xsl:apply-templates select="@* | node()"/>
     </xsl:element>
